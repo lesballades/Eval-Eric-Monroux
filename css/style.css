@@ -1,0 +1,56 @@
+@font-face{
+font-family: MyriadPro-Regular.otf;
+src: url('font/MyriadPro-Regular.otf');
+}
+*{margin:0; padding:0;}
+.page{
+width: 65%;
+display:flex;
+flex-direction:column;
+border:3px solid black;
+margin:0 auto;
+
+}
+header{
+display: flex;
+font-size:1.3em;
+justify-content: center;
+font-family : MyriadPro-Regular.otf;
+}
+header ul{
+display:flex;
+flex-direction:row;
+list-style-type: none;
+}
+#ulg{
+order:1;
+}
+header img{
+order:2;
+
+}
+#uld{
+order:3;
+}
+header ul li{
+margin:0px;
+padding: 20px;
+}
+header ul li a{
+text-decoration: none;
+color: black;
+}
+section{
+display: flex;
+justify-content: center;
+}
+#yo{
+width: 99%;
+height: auto;
+}
+footer{
+display: flex;
+justify-content: center;
+}
+
+

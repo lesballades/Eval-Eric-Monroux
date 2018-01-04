@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evènements privés</title>
+	<meta charset="utf-8"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="css/contact.css"/>
+  	<script>
+		$(document).ready(function(){ 
+    $('#characterLeft').text('140 characters left');
+    $('#message').keydown(function () {
+        var max = 140;
+        var len = $(this).val().length;
+        if (len >= max) {
+            $('#characterLeft').text('You have reached the limit');
+            $('#characterLeft').addClass('red');
+            $('#btnSubmit').addClass('disabled');            
+        } 
+        else {
+            var ch = max - len;
+            $('#characterLeft').text(ch + ' characters left');
+            $('#btnSubmit').removeClass('disabled');
+            $('#characterLeft').removeClass('red');            
+        }
+    });    
+});
+
+  	</script>
+</head>
+<body>
+	<div class="page">
+		<header>
+			<ul id="ulg">
+				<li><a href="index.html">Réception d'entreprises</a></li>
+				<li><a href="evenements_prives.html">Evènements privés</a></li>
+			</ul>
+				<img src="img/logo_gaumart1.png" alt="logo gaumart"/>
+			<ul id="uld">
+				<li><a href="traiteur.html">Traiteur</a></li>
+				<li><a href="partenaires.html">Nos référence</a></li>
+				<li><a href="contact.html">Nous contacter</a></li>
+				
+			</ul>
+		</header>
+		<section>
+			<div id="col1">
+				<h3>GAUMART</h3>
+				<p>Tél: 01 45 83 78 78<br>
+				Email:<span id="mail">gaumart75@orange.fr</span>
+				</p>
+
+				<img src="img/miniardises.jpg" class="img-responsive">
+			</div>
+			<div id="col2">
+				<div class="container">
+					<div class="col-md-5">
+						<div class="form-area">  
+							<form role="form">
+							<br style="clear:both">										
+										<div class="form-group">
+											<input type="text" class="form-control" id="name" name="name" placeholder="NOM" required>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="email" name="email" placeholder="SOCIETE" required>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="mobile" name="mobile" placeholder="EMAIL" required>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="subject" name="subject" placeholder="TEL" required>
+										</div>
+										<div class="form-group">
+										<textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>                
+										</div>							
+							<button type="button" id="submit" name="submit" class="btn btn-primary pull-right">ENVOYER</button>
+							</form>
+						</div>
+					</div>
+			</div>
+
+		</section>
+		<footer>
+			<img src="img/titre_footer.jpg" alt="img footer">
+		</footer>
+	</div>
+</body>
+
+</html>
+
